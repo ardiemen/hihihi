@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Selamat Pagi Salma</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Morning Salma</title>
 
   <style>
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: 'Segoe UI', sans-serif;
+      font-family:'Poppins',sans-serif;
     }
 
     body{
@@ -18,65 +19,55 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      background: linear-gradient(135deg, #f8f5ff, #ffeef2);
-      overflow:hidden;
+      background:linear-gradient(135deg,#fff1c9,#ffdfe8,#f2e7ff);
+      padding:20px;
     }
 
     .card{
-      width:90%;
+      width:100%;
       max-width:420px;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(10px);
-      border-radius:24px;
-      padding:35px 30px;
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(10px);
+      border-radius:28px;
+      padding:38px 30px;
       text-align:center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      animation: fadeIn 1.2s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      animation:fade 1s ease;
     }
 
     .sun{
-      width:90px;
-      height:90px;
-      margin:0 auto 20px;
-      background: #ffd36b;
+      width:80px;
+      height:80px;
+      background:#ffd45f;
       border-radius:50%;
-      position:relative;
-      box-shadow: 0 0 40px rgba(255,211,107,0.6);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .sun::before{
-      content:'';
-      position:absolute;
-      inset:-15px;
-      border-radius:50%;
-      border:3px dashed rgba(255,211,107,0.6);
+      margin:0 auto 22px;
+      box-shadow:0 0 35px rgba(255,212,95,0.7);
     }
 
     h1{
-      font-size:30px;
       color:#444;
-      margin-bottom:15px;
+      font-size:30px;
+      margin-bottom:18px;
     }
 
     p{
       color:#666;
+      font-size:15.5px;
       line-height:1.8;
-      font-size:16px;
     }
 
     .highlight{
-      color:#ff7b9c;
+      color:#ff7899;
       font-weight:600;
     }
 
     .footer{
-      margin-top:25px;
-      font-size:14px;
+      margin-top:22px;
+      font-size:13px;
       color:#999;
     }
 
-    @keyframes fadeIn{
+    @keyframes fade{
       from{
         opacity:0;
         transform:translateY(20px);
@@ -86,54 +77,31 @@
         transform:translateY(0);
       }
     }
-
-    @keyframes float{
-      0%,100%{
-        transform:translateY(0);
-      }
-      50%{
-        transform:translateY(-8px);
-      }
-    }
-
-    @media(max-width:480px){
-      h1{
-        font-size:26px;
-      }
-
-      p{
-        font-size:15px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <div class="card">
+
     <div class="sun"></div>
 
-    <h1>Selamat Pagi, Salma ☀️</h1>
+    <h1>Selamat Pagi ☀️</h1>
 
     <p>
-      Semangat untuk menjalani hari ini yaa.
-      Semoga semua urusanmu diberikan
-      <span class="highlight">kelancaran</span>,
-      dipenuhi hal-hal baik,
-      dan selalu diberikan
-      <span class="highlight">keberkahan</span>.
+      Semangat ya hari ini, Salma.
+      Semoga semuanya lancar,
+      dimudahkan segala urusannya,
+      dan jangan lupa sarapan 😄
     </p>
 
-    <br>
-
-    <p>
-      Jangan lupa istirahat kalau capek,
-      dan semoga harimu berjalan lebih indah
-      dari yang kamu bayangkan hari ini :)
+    <p style="margin-top:12px;">
+      jangan lupa es yang kemaren dibawa yaa wkwk
     </p>
 
     <div class="footer">
-      makasih yaahhh ✨
+      jum'at berkah, have a nice day ✨
     </div>
+
   </div>
 
 </body>
