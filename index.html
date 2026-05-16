@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Morning Salma</title>
+  <title>Semangat Kuliah Salma</title>
 
   <style>
     *{
@@ -19,34 +19,108 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      background:linear-gradient(135deg,#fff1c9,#ffdfe8,#f2e7ff);
-      padding:20px;
+      overflow:hidden;
+      background:linear-gradient(to bottom,#87ceff,#dff6ff);
+      position:relative;
     }
 
+    /* Matahari */
+    .sun{
+      position:absolute;
+      top:60px;
+      right:80px;
+      width:120px;
+      height:120px;
+      background:#ffd34d;
+      border-radius:50%;
+      box-shadow:0 0 60px rgba(255,211,77,0.8);
+    }
+
+    /* Pelangi */
+    .rainbow{
+      position:absolute;
+      bottom:-120px;
+      width:500px;
+      height:250px;
+      border-radius:250px 250px 0 0;
+      background:
+      linear-gradient(
+        to bottom,
+        #ff6b6b 0%,
+        #ff6b6b 16%,
+        #ffa94d 16%,
+        #ffa94d 32%,
+        #ffd43b 32%,
+        #ffd43b 48%,
+        #69db7c 48%,
+        #69db7c 64%,
+        #4dabf7 64%,
+        #4dabf7 80%,
+        #b197fc 80%,
+        #b197fc 100%
+      );
+      opacity:0.85;
+    }
+
+    /* Awan */
+    .cloud{
+      position:absolute;
+      background:white;
+      width:120px;
+      height:55px;
+      border-radius:50px;
+    }
+
+    .cloud::before,
+    .cloud::after{
+      content:'';
+      position:absolute;
+      background:white;
+      border-radius:50%;
+    }
+
+    .cloud::before{
+      width:60px;
+      height:60px;
+      top:-25px;
+      left:15px;
+    }
+
+    .cloud::after{
+      width:70px;
+      height:70px;
+      top:-35px;
+      right:15px;
+    }
+
+    .c1{
+      top:90px;
+      left:70px;
+    }
+
+    .c2{
+      top:170px;
+      right:180px;
+      transform:scale(0.8);
+    }
+
+    /* Card */
     .card{
-      width:100%;
-      max-width:420px;
-      background:rgba(255,255,255,0.8);
+      width:90%;
+      max-width:430px;
+      background:rgba(255,255,255,0.82);
       backdrop-filter:blur(10px);
       border-radius:28px;
       padding:38px 30px;
       text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      box-shadow:0 12px 35px rgba(0,0,0,0.1);
+      z-index:2;
       animation:fade 1s ease;
     }
 
-    .sun{
-      width:80px;
-      height:80px;
-      background:#ffd45f;
-      border-radius:50%;
-      margin:0 auto 22px;
-      box-shadow:0 0 35px rgba(255,212,95,0.7);
-    }
-
     h1{
-      color:#444;
       font-size:30px;
+      color:#444;
       margin-bottom:18px;
     }
 
@@ -57,14 +131,14 @@
     }
 
     .highlight{
-      color:#ff7899;
+      color:#ff7aa2;
       font-weight:600;
     }
 
     .footer{
       margin-top:22px;
-      font-size:13px;
       color:#999;
+      font-size:13px;
     }
 
     @keyframes fade{
@@ -77,29 +151,55 @@
         transform:translateY(0);
       }
     }
+
+    @media(max-width:480px){
+      h1{
+        font-size:26px;
+      }
+
+      .rainbow{
+        width:380px;
+        height:190px;
+      }
+
+      .sun{
+        width:90px;
+        height:90px;
+        right:30px;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="card">
+  <div class="sun"></div>
 
-    <div class="sun"></div>
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+
+  <div class="rainbow"></div>
+
+  <div class="card">
 
     <h1>Selamat Pagi ☀️</h1>
 
     <p>
-      Semangat ya hari ini, Salma.
+      Semangat kuliah hari ini dan besok ya!!!
       Semoga semuanya lancar,
-      dimudahkan segala urusannya,
-      dan jangan lupa sarapan 😄
+      tugasnya dipermudah,
+      dan harinya penuh hal baik ✨
     </p>
 
-    <p style="margin-top:12px;">
-      jangan lupa es yang kemaren dibawa yaa wkwk
+    <p style="margin-top:14px;">
+      Jangan kecapean juga,
+      nanti kalau kamu tumbang,
+      kasihan yang diem-diem nyemangatin 😌
+      wkwkwk 😅🙏
     </p>
 
     <div class="footer">
-      jum'at berkah, have a nice day ✨
+      have a happy day 🌈
     </div>
 
   </div>
