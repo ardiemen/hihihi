@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Semangat Kuliah Salma</title>
+  <title>Monday Morning</title>
 
   <style>
     *{
@@ -20,108 +20,64 @@
       justify-content:center;
       align-items:center;
       overflow:hidden;
-      background:linear-gradient(to bottom,#87ceff,#dff6ff);
+      background:linear-gradient(180deg,#fdf6f0,#f6f0ff,#eef7ff);
       position:relative;
     }
 
-    /* Matahari */
-    .sun{
+    /* Bubble background */
+    .bubble{
       position:absolute;
-      top:60px;
-      right:80px;
-      width:120px;
-      height:120px;
-      background:#ffd34d;
       border-radius:50%;
-      box-shadow:0 0 60px rgba(255,211,77,0.8);
+      background:rgba(255,255,255,0.45);
+      backdrop-filter:blur(4px);
     }
 
-    /* Pelangi */
-    .rainbow{
-      position:absolute;
-      bottom:-120px;
-      width:500px;
-      height:250px;
-      border-radius:250px 250px 0 0;
-      background:
-      linear-gradient(
-        to bottom,
-        #ff6b6b 0%,
-        #ff6b6b 16%,
-        #ffa94d 16%,
-        #ffa94d 32%,
-        #ffd43b 32%,
-        #ffd43b 48%,
-        #69db7c 48%,
-        #69db7c 64%,
-        #4dabf7 64%,
-        #4dabf7 80%,
-        #b197fc 80%,
-        #b197fc 100%
-      );
-      opacity:0.85;
+    .b1{
+      width:220px;
+      height:220px;
+      top:-60px;
+      left:-60px;
     }
 
-    /* Awan */
-    .cloud{
-      position:absolute;
-      background:white;
-      width:120px;
-      height:55px;
-      border-radius:50px;
+    .b2{
+      width:160px;
+      height:160px;
+      bottom:40px;
+      right:-40px;
     }
 
-    .cloud::before,
-    .cloud::after{
-      content:'';
-      position:absolute;
-      background:white;
-      border-radius:50%;
-    }
-
-    .cloud::before{
-      width:60px;
-      height:60px;
-      top:-25px;
-      left:15px;
-    }
-
-    .cloud::after{
-      width:70px;
-      height:70px;
-      top:-35px;
-      right:15px;
-    }
-
-    .c1{
-      top:90px;
-      left:70px;
-    }
-
-    .c2{
-      top:170px;
-      right:180px;
-      transform:scale(0.8);
+    .b3{
+      width:90px;
+      height:90px;
+      top:140px;
+      right:120px;
     }
 
     /* Card */
     .card{
       width:90%;
       max-width:430px;
-      background:rgba(255,255,255,0.82);
-      backdrop-filter:blur(10px);
-      border-radius:28px;
-      padding:38px 30px;
+      background:rgba(255,255,255,0.72);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.4);
+      border-radius:30px;
+      padding:40px 30px;
       text-align:center;
-      box-shadow:0 12px 35px rgba(0,0,0,0.1);
+      box-shadow:0 12px 35px rgba(0,0,0,0.08);
       z-index:2;
       animation:fade 1s ease;
     }
 
-    h1{
-      font-size:30px;
-      color:#444;
+    .emoji{
+      font-size:58px;
       margin-bottom:18px;
+    }
+
+    h1{
+      color:#4f4f4f;
+      font-size:30px;
+      margin-bottom:18px;
+      font-weight:600;
     }
 
     p{
@@ -131,14 +87,14 @@
     }
 
     .highlight{
-      color:#ff7aa2;
+      color:#ff8fab;
       font-weight:600;
     }
 
     .footer{
       margin-top:22px;
-      color:#999;
       font-size:13px;
+      color:#9a9a9a;
     }
 
     @keyframes fade{
@@ -157,15 +113,12 @@
         font-size:26px;
       }
 
-      .rainbow{
-        width:380px;
-        height:190px;
+      p{
+        font-size:15px;
       }
 
-      .sun{
-        width:90px;
-        height:90px;
-        right:30px;
+      .card{
+        padding:34px 24px;
       }
     }
 
@@ -173,33 +126,32 @@
 </head>
 <body>
 
-  <div class="sun"></div>
-
-  <div class="cloud c1"></div>
-  <div class="cloud c2"></div>
-
-  <div class="rainbow"></div>
+  <div class="bubble b1"></div>
+  <div class="bubble b2"></div>
+  <div class="bubble b3"></div>
 
   <div class="card">
 
-    <h1>Selamat Pagi ☀️</h1>
+    <div class="emoji">☁️</div>
+
+    <h1>Happy Monday, Salma ✨</h1>
 
     <p>
-      Semangat kuliah hari ini dan besok ya!!!
-      Semoga semuanya lancar,
-      tugasnya dipermudah,
-      dan harinya penuh hal baik ✨
+      Hari Senin nih,
+      semangat buat kerja dan aktivitas hari ini yaa.
+      Semoga semuanya <span class="highlight">lancar</span>,
+      mood-nya bagus,
+      dan harinya penuh hal baik ☀️
     </p>
 
     <p style="margin-top:14px;">
-      Jangan kecapean juga,
-      nanti kalau kamu tumbang,
-      kasihan yang diem-diem nyemangatin 😌
-      wkwkwk 😅🙏
+      Jangan terlalu capek juga,
+      nanti Seninnya baru mulai
+      tapi energinya udah tinggal 2% 😭
     </p>
 
     <div class="footer">
-      have a happy day 🌈
+      semangat menjalani hari kerja 😁😁
     </div>
 
   </div>
