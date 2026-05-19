@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Monday Morning</title>
+  <title>Rainy Mood</title>
 
   <style>
     *{
@@ -16,85 +16,119 @@
 
     body{
       height:100vh;
+      overflow:hidden;
       display:flex;
       justify-content:center;
       align-items:center;
-      overflow:hidden;
-      background:linear-gradient(180deg,#fdf6f0,#f6f0ff,#eef7ff);
+      background:linear-gradient(to bottom,#4b5d7a,#6f86a6,#9db4d3);
       position:relative;
     }
 
-    /* Bubble background */
-    .bubble{
+    /* Rain */
+    .rain{
       position:absolute;
-      border-radius:50%;
-      background:rgba(255,255,255,0.45);
-      backdrop-filter:blur(4px);
-    }
-
-    .b1{
-      width:220px;
-      height:220px;
-      top:-60px;
-      left:-60px;
-    }
-
-    .b2{
-      width:160px;
-      height:160px;
-      bottom:40px;
-      right:-40px;
-    }
-
-    .b3{
-      width:90px;
+      width:2px;
       height:90px;
-      top:140px;
-      right:120px;
+      background:rgba(255,255,255,0.3);
+      animation:rain 0.8s linear infinite;
+    }
+
+    .rain:nth-child(1){left:10%; animation-delay:0s;}
+    .rain:nth-child(2){left:20%; animation-delay:0.2s;}
+    .rain:nth-child(3){left:35%; animation-delay:0.4s;}
+    .rain:nth-child(4){left:50%; animation-delay:0.1s;}
+    .rain:nth-child(5){left:65%; animation-delay:0.5s;}
+    .rain:nth-child(6){left:80%; animation-delay:0.3s;}
+    .rain:nth-child(7){left:90%; animation-delay:0.6s;}
+
+    @keyframes rain{
+      from{
+        top:-100px;
+      }
+      to{
+        top:110%;
+      }
+    }
+
+    /* Cloud */
+    .cloud{
+      position:absolute;
+      top:70px;
+      width:180px;
+      height:70px;
+      background:#dde6f3;
+      border-radius:60px;
+      opacity:0.9;
+    }
+
+    .cloud::before,
+    .cloud::after{
+      content:'';
+      position:absolute;
+      background:#dde6f3;
+      border-radius:50%;
+    }
+
+    .cloud::before{
+      width:80px;
+      height:80px;
+      top:-35px;
+      left:20px;
+    }
+
+    .cloud::after{
+      width:100px;
+      height:100px;
+      top:-45px;
+      right:20px;
+    }
+
+    .c1{
+      left:8%;
+    }
+
+    .c2{
+      right:8%;
+      transform:scale(0.8);
     }
 
     /* Card */
     .card{
       width:90%;
       max-width:430px;
-      background:rgba(255,255,255,0.72);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,0.4);
-      border-radius:30px;
-      padding:40px 30px;
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter:blur(14px);
+      border-radius:28px;
+      padding:38px 30px;
       text-align:center;
-      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+      color:white;
       z-index:2;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
       animation:fade 1s ease;
     }
 
-    .emoji{
-      font-size:58px;
-      margin-bottom:18px;
-    }
-
     h1{
-      color:#4f4f4f;
       font-size:30px;
       margin-bottom:18px;
       font-weight:600;
     }
 
     p{
-      color:#666;
       font-size:15.5px;
-      line-height:1.8;
+      line-height:1.9;
+      color:#f3f3f3;
     }
 
     .highlight{
-      color:#ff8fab;
+      color:#ffd6e0;
       font-weight:600;
     }
 
     .footer{
       margin-top:22px;
       font-size:13px;
-      color:#9a9a9a;
+      color:#d8d8d8;
     }
 
     @keyframes fade{
@@ -109,6 +143,7 @@
     }
 
     @media(max-width:480px){
+
       h1{
         font-size:26px;
       }
@@ -120,38 +155,52 @@
       .card{
         padding:34px 24px;
       }
+
+      .cloud{
+        width:130px;
+        height:55px;
+      }
     }
 
   </style>
 </head>
 <body>
 
-  <div class="bubble b1"></div>
-  <div class="bubble b2"></div>
-  <div class="bubble b3"></div>
+  <!-- Rain -->
+  <div class="rain"></div>
+  <div class="rain"></div>
+  <div class="rain"></div>
+  <div class="rain"></div>
+  <div class="rain"></div>
+  <div class="rain"></div>
+  <div class="rain"></div>
 
+  <!-- Clouds -->
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+
+  <!-- Card -->
   <div class="card">
 
-    <div class="emoji">☁️</div>
-
-    <h1>Happy Monday, Salma ✨</h1>
+    <h1>Gatau ngasi judul apa wkwk ☔</h1>
 
     <p>
-      Hari Senin nih,
-      semangat buat kerja dan aktivitas hari ini yaa.
-      Semoga semuanya <span class="highlight">lancar</span>,
-      mood-nya bagus,
-      dan harinya penuh hal baik ☀️
+      Gatau kenapa,
+      perasaannya agak aneh kemaren.
+      Kaya ada sedikit <span class="highlight">cemb***</span>,
+      padahal sadar...
+      bukan siapa-siapa wkwk 😅
     </p>
 
     <p style="margin-top:14px;">
-      Jangan terlalu capek juga,
-      nanti Seninnya baru mulai
-      tapi energinya udah tinggal 2% 😭
+      Tapi yaudahlah,
+      mungkin cuma takut
+      ada orang lain yang bisa
+      bikin kamu senyum lebih sering aja.
     </p>
 
     <div class="footer">
-      semangat menjalani hari kerja 😁😁
+       cuman nanya doang loh hehe 😅
     </div>
 
   </div>
